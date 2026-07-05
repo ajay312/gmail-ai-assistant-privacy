@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Privacy Policy — Gmail AI Assistant</title>
+<style>
+  :root {
+    --text: #1a1a18;
+    --muted: #5f5e5a;
+    --border: #e5e4de;
+    --accent: #5b4ae0;
+    --bg: #fbfaf7;
+  }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+  }
+  .wrap {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 56px 24px 80px;
+  }
+  h1 {
+    font-size: 28px;
+    margin-bottom: 4px;
+  }
+  .updated {
+    color: var(--muted);
+    font-size: 14px;
+    margin-bottom: 40px;
+  }
+  h2 {
+    font-size: 18px;
+    margin-top: 36px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 6px;
+  }
+  p, li {
+    font-size: 15px;
+    color: var(--text);
+  }
+  ul {
+    padding-left: 20px;
+  }
+  a {
+    color: var(--accent);
+  }
+  .fill-me {
+    background: #fff3cd;
+    padding: 1px 5px;
+    border-radius: 4px;
+    font-weight: 600;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 12px 0;
+    font-size: 14px;
+  }
+  th, td {
+    text-align: left;
+    padding: 8px 10px;
+    border: 1px solid var(--border);
+  }
+  th {
+    background: #f1f0ea;
+  }
+  footer {
+    margin-top: 48px;
+    font-size: 13px;
+    color: var(--muted);
+  }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>Privacy Policy — Gmail AI Assistant</h1>
+    <div class="updated">Last updated: <span class="fill-me">[DATE]</span></div>
+
+    <h2>What this extension does</h2>
+    <p>
+      Gmail AI Assistant adds a button inside Gmail's compose window that lets you
+      rewrite your email draft using Claude, an AI model by Anthropic.
+    </p>
+
+    <h2>What data we access</h2>
+    <ul>
+      <li>
+        <strong>Email draft content</strong> — When you click the assist button, the
+        extension reads the text currently in the compose box you are actively writing
+        in. It does not read your inbox, sent mail, contacts, or any other Gmail data.
+      </li>
+      <li>
+        <strong>Your Anthropic API key</strong> — Entered by you in the extension's
+        settings popup, used to authenticate requests to Anthropic's API.
+      </li>
+    </ul>
+
+    <h2>What we do with this data</h2>
+    <p>
+      Your draft text is sent directly from your browser to Anthropic's API
+      (api.anthropic.com) along with your chosen instruction (e.g. "make this more
+      formal"), and the rewritten text is returned and placed back into your compose box.
+    </p>
+    <p>
+      We (the extension developer) do not operate a server, do not receive a copy of
+      your email content, and do not log or store your drafts anywhere. The only parties
+      who see your draft content are you and Anthropic, per Anthropic's own API data
+      handling terms.
+    </p>
+
+    <h2>Where your data is stored</h2>
+    <p>
+      Your Anthropic API key is stored locally using Chrome's <code>storage</code> API
+      (synced across your own Chrome sessions if you're signed into Chrome). It is never
+      transmitted to us or any third party other than Anthropic.
+    </p>
+    <p>
+      No email content is ever stored by this extension. Each rewrite request is sent,
+      processed, and discarded once the result is returned to your compose box.
+    </p>
+
+    <h2>Data we collect — summary</h2>
+    <table>
+      <tr><th>Data type</th><th>Collected?</th><th>Notes</th></tr>
+      <tr><td>Personally identifiable info</td><td>No</td><td>—</td></tr>
+      <tr><td>Authentication info</td><td>Yes</td><td>Your own Anthropic API key, stored locally only</td></tr>
+      <tr><td>Personal communications</td><td>Yes</td><td>Email draft text, sent to Anthropic to generate the rewrite you request — never stored by us</td></tr>
+      <tr><td>Website content</td><td>Yes</td><td>The active Gmail compose box content, only when you click the assist button</td></tr>
+      <tr><td>Location, web history, financial info</td><td>No</td><td>—</td></tr>
+    </table>
+
+    <h2>Third-party sharing</h2>
+    <p>
+      We do not sell, share, or transmit any user data to third parties other than
+      Anthropic, and only for the direct purpose of generating your requested rewrite.
+    </p>
+
+    <h2>Planned future data use</h2>
+    <p>
+      If a future version introduces paid subscriptions, this policy will be updated
+      before that version ships. At that point, we expect to additionally collect an
+      email address (for account access) and subscription/billing status (processed by
+      Stripe; we do not directly store payment card details). Draft content would, at
+      that point, pass through our backend server to verify subscription status before
+      each request, but would still not be stored or logged beyond the time needed to
+      process each request.
+    </p>
+
+    <h2>Your choices</h2>
+    <p>
+      You can remove your API key at any time from the extension popup, which stops all
+      functionality. Uninstalling the extension deletes all locally stored data.
+    </p>
+
+    <h2>Contact</h2>
+    <p>Questions about this policy: <span class="fill-me">[YOUR EMAIL]</span></p>
+
+    <footer>Gmail AI Assistant is not affiliated with or endorsed by Google LLC.</footer>
+  </div>
+</body>
+</html>
